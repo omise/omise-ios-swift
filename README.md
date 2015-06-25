@@ -1,7 +1,7 @@
 omise-ios-swift
 =========
 
-omise-ios-swift is a Swift library for managing token with Omise API.
+Omise-iOS-Swift is a Swift 1.2 library for managing token with Omise API.
 
 By using the token produced by this library, you will be able to securely process credit card without letting sensitive information pass through your server. This token can also be used to create customer card data which will allow re-using of card data for the next payment without entering it again.
 
@@ -9,7 +9,14 @@ All data are transmitted via HTTPS to our PCI-DSS certified server.
 
 ## Setup
 
-Please copy all files in {repo root}/Omise-iOS/Omise-iOS/OmiseLib into your project.
+Please copy all files in {repo root}/Omise-iOS_SDK/SDK into your project.
+
+## Installation
+
+Omise-iOS-Swift is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+    pod 'Omise-iOS-Swift', '~> 1.0'
 
 ## Primary classes
 
