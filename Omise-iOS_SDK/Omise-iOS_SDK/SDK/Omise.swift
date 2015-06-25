@@ -33,7 +33,7 @@ class Omise: NSObject, NSURLConnectionDelegate {
     func requestToken(tokenRequest: TokenRequest?) {
 
         if isConnecting {
-            var omiseError = NSError(domain: OmiseErrorDomain, code:OmiseErrorCode.OmiseServerConnectionError.rawValue , userInfo: ["Connection error": "Running other request."])
+            let omiseError = NSError(domain: OmiseErrorDomain, code:OmiseErrorCode.OmiseServerConnectionError.rawValue , userInfo: ["Connection error": "Running other request."])
             delegate?.omiseOnFailed(omiseError)
         }
         
@@ -43,23 +43,23 @@ class Omise: NSObject, NSURLConnectionDelegate {
         data = NSMutableData()
         mTokenRequest = tokenRequest
         
-        var url = NSURL(string: "https://vault.omise.co/tokens")
-        var req = NSMutableURLRequest(URL: url!, cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 15)
+        let url = NSURL(string: "https://vault.omise.co/tokens")
+        let req = NSMutableURLRequest(URL: url!, cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 15)
         req.HTTPMethod = "POST"
         
         if let mTokenRequest = mTokenRequest {
             if let card = mTokenRequest.card {
-                var body = "card[name]=\(card.name!)&card[city]=\(card.city!)&card[postal_code]=\(card.postalCode!)&card[number]=\(card.number!)&card[expiration_month]=\(card.expirationMonth!)&card[expiration_year]=\(card.expirationYear!)&card[security_code]=\(card.securityCode!)"
+                let body = "card[name]=\(card.name!)&card[city]=\(card.city!)&card[postal_code]=\(card.postalCode!)&card[number]=\(card.number!)&card[expiration_month]=\(card.expirationMonth!)&card[expiration_year]=\(card.expirationYear!)&card[security_code]=\(card.securityCode!)"
                 
                 req.HTTPBody = body.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
                 
-                var loginString = "\(mTokenRequest.publicKey!):"
-                var plainData = loginString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
-                var base64String = plainData?.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(0))
-                var base64LoginData = "Basic \(base64String!)"
+                let loginString = "\(mTokenRequest.publicKey!):"
+                let plainData = loginString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+                let base64String = plainData?.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
+                let base64LoginData = "Basic \(base64String!)"
                 req.setValue(base64LoginData, forHTTPHeaderField: "Authorization")
                 
-                var connection = NSURLConnection(request: req, delegate: self, startImmediately: false)
+                let connection = NSURLConnection(request: req, delegate: self, startImmediately: false)
                 connection?.start()
                 
             }
@@ -76,7 +76,7 @@ class Omise: NSObject, NSURLConnectionDelegate {
     }
     
     func connection(connection: NSURLConnection, didFailWithError error: NSError) {
-        var omiseError = NSError()
+        var omiseError:NSError!
         if error.code == NSURLErrorTimedOut {
             omiseError = NSError(domain: OmiseErrorDomain, code: OmiseErrorCode.OmiseTimeoutError.rawValue, userInfo: ["Request timeout": "Request timeout"])
         }else{
@@ -90,19 +90,19 @@ class Omise: NSObject, NSURLConnectionDelegate {
     func connection(connection: NSURLConnection, didReceiveAuthenticationChallenge challenge: NSURLAuthenticationChallenge) {
         
         if challenge.previousFailureCount > 0 {
-            challenge.sender.cancelAuthenticationChallenge(challenge)
-            var error = NSError(domain: "error", code: Int.min, userInfo: nil)
+            challenge.sender!.cancelAuthenticationChallenge(challenge)
+            let error = NSError(domain: "error", code: Int.min, userInfo: nil)
             self.connection(connection, didFailWithError: error)
             
-            var omiseError = NSError(domain: OmiseErrorDomain, code: OmiseErrorCode.OmiseServerConnectionError.rawValue, userInfo: ["Connection error": "Authentication failed."])
+            let omiseError = NSError(domain: OmiseErrorDomain, code: OmiseErrorCode.OmiseServerConnectionError.rawValue, userInfo: ["Connection error": "Authentication failed."])
             delegate?.omiseOnFailed(omiseError)
             return
         }
         
         if requestingApi == OmiseApi.OmiseToken.rawValue {
             if let mTokenRequest = mTokenRequest {
-                var credential = NSURLCredential(user: mTokenRequest.publicKey!, password: "", persistence: NSURLCredentialPersistence.ForSession)
-                challenge.sender.useCredential(credential, forAuthenticationChallenge: challenge)
+                let credential = NSURLCredential(user: mTokenRequest.publicKey!, password: "", persistence: NSURLCredentialPersistence.ForSession)
+                challenge.sender!.useCredential(credential, forAuthenticationChallenge: challenge)
             }
         }
     }
@@ -113,9 +113,9 @@ class Omise: NSObject, NSURLConnectionDelegate {
     
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         if let data = data {
-            var responseText = NSString(data: data, encoding:NSUTF8StringEncoding)
+            let responseText = NSString(data: data, encoding:NSUTF8StringEncoding)
             
-            var jsonParser = JsonParser()
+            let jsonParser = JsonParser()
             var token: Token?
             
             if let requestingApi = requestingApi {
@@ -125,7 +125,7 @@ class Omise: NSObject, NSURLConnectionDelegate {
                     if (token != nil) {
                         delegate?.omiseOnSucceededToken(token)
                     }else{
-                        var omiseError = NSError(domain: OmiseErrorDomain, code: OmiseErrorCode.OmiseBadRequestError.rawValue, userInfo: ["Invalid param": "Invalid public key or parameters."])
+                        let omiseError = NSError(domain: OmiseErrorDomain, code: OmiseErrorCode.OmiseBadRequestError.rawValue, userInfo: ["Invalid param": "Invalid public key or parameters."])
                         delegate?.omiseOnFailed(omiseError)
                     }
                     break

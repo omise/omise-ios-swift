@@ -32,7 +32,7 @@ class AccessOmiseViewController: UIViewController {
         
         self.startActivity()
         
-        var tokenRequest = TokenRequest()
+        let tokenRequest = TokenRequest()
         tokenRequest.publicKey = "pkey_test_4y7dh41kuvvawbhslxw" //required
         tokenRequest.card!.name = "JOHN DOE" //required
         tokenRequest.card!.city = "Bangkok" //required
@@ -42,7 +42,7 @@ class AccessOmiseViewController: UIViewController {
         tokenRequest.card!.expirationYear = "2016" //required
         tokenRequest.card!.securityCode = "123" //required
         
-        var omise = Omise()
+        let omise = Omise()
         omise.delegate = self
         omise.requestToken(tokenRequest)
         
@@ -64,7 +64,7 @@ class AccessOmiseViewController: UIViewController {
             return
         }
         
-        var pasteBoard = UIPasteboard.generalPasteboard()
+        let pasteBoard = UIPasteboard.generalPasteboard()
         if let tokenKey = btnToken.titleLabel {
             pasteBoard.setValue(tokenKey.text!, forPasteboardType: "public.text")
             
@@ -97,7 +97,7 @@ class AccessOmiseViewController: UIViewController {
 extension AccessOmiseViewController: OmiseRequestDelegate {
     
     func omiseOnFailed(error: NSError?) {
-        println("Fail")
+        print("Fail")
         btnToken.setTitle("Sorry, Please try again...", forState: UIControlState.Normal)
         succeeded = false
         
@@ -105,7 +105,7 @@ extension AccessOmiseViewController: OmiseRequestDelegate {
     }
     
     func omiseOnSucceededToken(token: Token?) {
-        println("Success")
+        print("Success")
         if let token = token {
             btnToken.setTitle(token.tokenId, forState: UIControlState.Normal)
             succeeded = true
