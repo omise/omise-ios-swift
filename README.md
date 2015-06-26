@@ -50,7 +50,7 @@ AccessOmiseViewController.swift
     [super viewDidLoad];
 
     //set parameters
-    var tokenRequest = TokenRequest()
+    let tokenRequest = TokenRequest()
     tokenRequest.publicKey = "pkey_test_4y7dh41kuvvawbhslxw" //required
     tokenRequest.card!.name = "JOHN DOE" //required
     tokenRequest.card!.city = "Bangkok" //required
@@ -61,7 +61,7 @@ AccessOmiseViewController.swift
     tokenRequest.card!.securityCode = "123" //required
     
     //request
-    var omise = Omise()
+    let omise = Omise()
     omise.delegate = self
     omise.requestToken(tokenRequest)
 }
