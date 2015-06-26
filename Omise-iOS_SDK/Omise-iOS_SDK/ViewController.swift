@@ -29,10 +29,10 @@ class ViewController: UIViewController {
     
     // MARK: - Test
     func test(api:Int) {
-        var omise = Omise()
+        let omise = Omise()
         omise.delegate = self
         
-        var tokenRequest = TokenRequest()
+        let tokenRequest = TokenRequest()
         
         if textFieldPublicKey.text.isEmpty {
             tokenRequest.publicKey = "pkey_test_4ya6kkbjfporhk3gwnt"
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
             tokenRequest.publicKey = textFieldPublicKey.text
         }
         
-        if var card = tokenRequest.card {
+        if let card = tokenRequest.card {
             card.name = "JOHN DOE"
             card.city = "Bangkok"
             card.postalCode = "10320"
@@ -82,14 +82,14 @@ extension ViewController: OmiseRequestDelegate {
             textViewJson.text = "token:{\n\ttokenId:\(token.tokenId!)\n\tlivemode:\(token.livemode!)\n\tlocation:\(token.location!)\n\tused:\(token.used!)\n\tcard:{\n\t\t"
             
             if let card = token.card {
-                var output = "cardId:\(card.cardId!)\n\t\tlivemode:\(card.livemode!)\n\t\tcountry:\(card.country!)\n\t\tcity:\(card.city!)\n\t\tpostal_code:\(card.postalCode!)\n\t\tfinancing:\(card.financing!)\n\t\tlast_digits:\(card.lastDigits!)\n\t\tbrand:\(card.brand!)\n\t\texpiration_month:\(card.expirationMonth!)\n\t\texpiration_year:\(card.expirationYear!)\n\t\tfingerprint:\(card.fingerprint!)\n\t\tname:\(card.name!)\n\t\tcreated:\(card.created!)\n\t}\n\t"
+                let output = "cardId:\(card.cardId!)\n\t\tlivemode:\(card.livemode!)\n\t\tcountry:\(card.country!)\n\t\tcity:\(card.city!)\n\t\tpostal_code:\(card.postalCode!)\n\t\tfinancing:\(card.financing!)\n\t\tlast_digits:\(card.lastDigits!)\n\t\tbrand:\(card.brand!)\n\t\texpiration_month:\(card.expirationMonth!)\n\t\texpiration_year:\(card.expirationYear!)\n\t\tfingerprint:\(card.fingerprint!)\n\t\tname:\(card.name!)\n\t\tcreated:\(card.created!)\n\t}\n\t"
                 
                 textViewJson.text = textViewJson.text + output
             }
             
             textViewJson.text = textViewJson.text + "created:\(token.created!)\n}"
             
-            var omise = Omise()
+            let omise = Omise()
             omise.delegate = self
         }
         

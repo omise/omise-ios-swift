@@ -11,15 +11,15 @@ import UIKit
 class JsonParser: NSObject {
     func parseOmiseToken(json: NSString)->Token? {
         
-        var jsonObject: AnyObject? = NSJSONSerialization.JSONObjectWithData(json.dataUsingEncoding(NSUTF8StringEncoding)!, options: NSJSONReadingOptions.AllowFragments, error: nil)
+        let jsonObject: AnyObject? = NSJSONSerialization.JSONObjectWithData(json.dataUsingEncoding(NSUTF8StringEncoding)!, options: NSJSONReadingOptions.AllowFragments, error: nil)
         
         if let jsonDict = jsonObject as? NSDictionary {
-            var obj = jsonDict.objectForKey("object") as? String
+            let obj = jsonDict.objectForKey("object") as? String
             if obj == "error" {
                 return nil
             }
             
-            var token = Token()
+            let token = Token()
             token.tokenId = jsonDict.objectForKey("id") as? String
             token.livemode = jsonDict.objectForKey("livemode") as? Bool
             token.location = jsonDict.objectForKey("location") as? String
@@ -27,7 +27,7 @@ class JsonParser: NSObject {
             token.created = jsonDict.objectForKey("created") as? String
             
             if let cardObject = jsonDict.objectForKey("card") as? NSDictionary {
-
+                
                 token.card?.cardId = cardObject.objectForKey("id") as? String
                 token.card?.livemode = cardObject.objectForKey("livemode") as? Bool
                 token.card?.country = cardObject.objectForKey("country") as? String

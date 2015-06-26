@@ -32,7 +32,7 @@ class AccessOmiseViewController: UIViewController {
         
         self.startActivity()
         
-        var tokenRequest = TokenRequest()
+        let tokenRequest = TokenRequest()
         tokenRequest.publicKey = "pkey_test_4y7dh41kuvvawbhslxw" //required
         tokenRequest.card!.name = "JOHN DOE" //required
         tokenRequest.card!.city = "Bangkok" //required
@@ -42,7 +42,7 @@ class AccessOmiseViewController: UIViewController {
         tokenRequest.card!.expirationYear = "2016" //required
         tokenRequest.card!.securityCode = "123" //required
         
-        var omise = Omise()
+        let omise = Omise()
         omise.delegate = self
         omise.requestToken(tokenRequest)
         
