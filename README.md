@@ -11,6 +11,13 @@ All data are transmitted via HTTPS to our PCI-DSS certified server.
 
 Please copy all files in {repo root}/Omise-iOS/Omise-iOS/OmiseLib into your project.
 
+## Installation
+
+Omise-iOS-Swift is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+    pod 'Omise-iOS-Swift', '~> 1.0'
+
 ## Primary classes
 
 ### Card
