@@ -1,4 +1,4 @@
-omise-ios-swift
+Omise-iOS-Swift
 =========
 
 Omise-iOS-Swift is a Swift 2.0 library for managing token with Omise API.
