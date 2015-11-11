@@ -44,6 +44,7 @@ class Omise: NSObject, NSURLConnectionDelegate {
         mTokenRequest = tokenRequest
         
         let url = NSURL(string: "https://vault.omise.co/tokens")
+        let OMISE_IOS_VERSION = "1.0.2"
         let req = NSMutableURLRequest(URL: url!, cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 15)
         req.HTTPMethod = "POST"
         
@@ -57,8 +58,9 @@ class Omise: NSObject, NSURLConnectionDelegate {
                 let plainData = loginString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
                 let base64String = plainData?.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
                 let base64LoginData = "Basic \(base64String!)"
+                let userAgentData = "OmiseIOSSwift/\(OMISE_IOS_VERSION)"
                 req.setValue(base64LoginData, forHTTPHeaderField: "Authorization")
-                
+                req.setValue(userAgentData, forHTTPHeaderField: "User-Agent")
                 let connection = NSURLConnection(request: req, delegate: self, startImmediately: false)
                 connection?.start()
                 
