@@ -24,4 +24,5 @@ class Card {
     var created: String?
     var securityCode: String?
     var securityCodeCheck: Bool?
+    var bank: String?
 }

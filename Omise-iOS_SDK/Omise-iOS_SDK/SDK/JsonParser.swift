@@ -47,7 +47,7 @@ class JsonParser: NSObject {
                 token.card?.name = cardObject.objectForKey("name") as? String
                 token.card?.created = cardObject.objectForKey("created") as? String
                 token.card?.securityCodeCheck = cardObject.objectForKey("security_code_check") as? Bool
-                
+                token.card?.bank = cardObject.objectForKey("bank") as? String
                 
                 return token
             }
