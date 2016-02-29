@@ -44,13 +44,25 @@ class Omise: NSObject, NSURLConnectionDelegate {
         mTokenRequest = tokenRequest
         
         let url = NSURL(string: "https://vault.omise.co/tokens")
-        let OMISE_IOS_VERSION = "1.0.2"
+        let OMISE_IOS_VERSION = "1.0.3"
         let req = NSMutableURLRequest(URL: url!, cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 15)
         req.HTTPMethod = "POST"
         
         if let mTokenRequest = mTokenRequest {
             if let card = mTokenRequest.card {
-                let body = "card[name]=\(card.name!)&card[city]=\(card.city!)&card[postal_code]=\(card.postalCode!)&card[number]=\(card.number!)&card[expiration_month]=\(card.expirationMonth!)&card[expiration_year]=\(card.expirationYear!)&card[security_code]=\(card.securityCode!)"
+                
+                var city = ""
+                var postalCode = ""
+                
+                if let userCity = card.city {
+                    city = userCity
+                }
+                
+                if let userPostalCode = card.postalCode {
+                    postalCode = userPostalCode
+                }
+                
+                let body = "card[name]=\(card.name!)&card[city]=\(city)&card[postal_code]=\(postalCode)&card[number]=\(card.number!)&card[expiration_month]=\(card.expirationMonth!)&card[expiration_year]=\(card.expirationYear!)&card[security_code]=\(card.securityCode!)"
                 
                 req.HTTPBody = body.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
                 
