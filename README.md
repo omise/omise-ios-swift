@@ -52,8 +52,8 @@ override func viewDidLoad() {
     let tokenRequest = TokenRequest()
     tokenRequest.publicKey = "pkey_test_4y7dh41kuvvawbhslxw" //required
     tokenRequest.card!.name = "JOHN DOE" //required
-    tokenRequest.card!.city = "Bangkok" //required
-    tokenRequest.card!.postalCode = "10320" //required
+    tokenRequest.card!.city = "Bangkok" // optional
+    tokenRequest.card!.postalCode = "10320" //optional
     tokenRequest.card!.number = "4242424242424242" //required
     tokenRequest.card!.expirationMonth = "11" //required
     tokenRequest.card!.expirationYear = "2016" //required
