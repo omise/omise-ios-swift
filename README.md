@@ -16,7 +16,7 @@ Please copy all files in {repo root}/Omise-iOS/Omise-iOS/OmiseLib into your proj
 Omise-iOS-Swift is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-    pod 'Omise-iOS-Swift', '~> 1.0'
+    pod 'Omise-iOS-Swift', '~> 2.0'
 
 ## Primary classes
 
@@ -24,11 +24,11 @@ it, simply add the following line to your Podfile:
 
 A class representing a card information.
 
-### TokenRequest
+### OmiseTokenRequest
 
 A class encapsulating parameters for requesting token. You will have to set card information as a parameter for this class.
 
-### Token
+### OmiseToken
 
 A class representing token. This class is what will be passed to the delegate if the request is successful.
 
@@ -49,7 +49,7 @@ override func viewDidLoad() {
     super.viewDidLoad()
 
     //set parameters
-    let tokenRequest = TokenRequest()
+    let tokenRequest = OmiseTokenRequest()
     tokenRequest.publicKey = "pkey_test_4y7dh41kuvvawbhslxw" //required
     tokenRequest.card!.name = "JOHN DOE" //required
     tokenRequest.card!.city = "Bangkok" // optional
@@ -73,7 +73,7 @@ extension AccessOmiseViewController: OmiseRequestDelegate {
         //handle error
     }
     
-    func omiseOnSucceededToken(token: Token?) {
+    func omiseOnSucceededToken(token: OmiseToken?) {
         //handle success
         if let token = token {
             //your code here
