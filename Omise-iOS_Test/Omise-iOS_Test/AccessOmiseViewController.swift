@@ -32,7 +32,7 @@ class AccessOmiseViewController: UIViewController {
         
         self.startActivity()
         
-        let tokenRequest = TokenRequest()
+        let tokenRequest = OmiseTokenRequest()
         tokenRequest.publicKey = "pkey_test_4y7dh41kuvvawbhslxw" //required
         tokenRequest.card!.name = "JOHN DOE" //required
         tokenRequest.card!.city = "Bangkok" //optional
@@ -104,7 +104,7 @@ extension AccessOmiseViewController: OmiseRequestDelegate {
         self.stopActivity()
     }
     
-    func omiseOnSucceededToken(token: Token?) {
+    func omiseOnSucceededToken(token: OmiseToken?) {
         print("Success")
         if let token = token {
             btnToken.setTitle(token.tokenId, forState: UIControlState.Normal)

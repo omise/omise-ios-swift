@@ -15,11 +15,11 @@
 		141217A51B2C166000430CD4 /* Omise_iOS_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141217A41B2C166000430CD4 /* Omise_iOS_TestTests.swift */; };
 		989F6C6E1B2E95940009FACF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989F6C671B2E95940009FACF /* Card.swift */; };
 		989F6C6F1B2E95940009FACF /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989F6C681B2E95940009FACF /* Cards.swift */; };
-		989F6C701B2E95940009FACF /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989F6C691B2E95940009FACF /* JsonParser.swift */; };
+		989F6C701B2E95940009FACF /* OmiseJsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989F6C691B2E95940009FACF /* OmiseJsonParser.swift */; };
 		989F6C711B2E95940009FACF /* Omise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989F6C6A1B2E95940009FACF /* Omise.swift */; };
 		989F6C721B2E95940009FACF /* OmiseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989F6C6B1B2E95940009FACF /* OmiseError.swift */; };
-		989F6C731B2E95940009FACF /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989F6C6C1B2E95940009FACF /* Token.swift */; };
-		989F6C741B2E95940009FACF /* TokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989F6C6D1B2E95940009FACF /* TokenRequest.swift */; };
+		989F6C731B2E95940009FACF /* OmiseToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989F6C6C1B2E95940009FACF /* OmiseToken.swift */; };
+		989F6C741B2E95940009FACF /* OmiseTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989F6C6D1B2E95940009FACF /* OmiseTokenRequest.swift */; };
 		989F6C791B2E96EA0009FACF /* img_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 989F6C781B2E96EA0009FACF /* img_bg.png */; };
 		989F6C7F1B2EA0CC0009FACF /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989F6C7E1B2EA0CC0009FACF /* CheckoutViewController.swift */; };
 		989F6C811B2EA0DE0009FACF /* AccessOmiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989F6C801B2EA0DE0009FACF /* AccessOmiseViewController.swift */; };
@@ -48,11 +48,11 @@
 		141217A41B2C166000430CD4 /* Omise_iOS_TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Omise_iOS_TestTests.swift; sourceTree = "<group>"; };
 		989F6C671B2E95940009FACF /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		989F6C681B2E95940009FACF /* Cards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
-		989F6C691B2E95940009FACF /* JsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
+		989F6C691B2E95940009FACF /* OmiseJsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmiseJsonParser.swift; sourceTree = "<group>"; };
 		989F6C6A1B2E95940009FACF /* Omise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omise.swift; sourceTree = "<group>"; };
 		989F6C6B1B2E95940009FACF /* OmiseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmiseError.swift; sourceTree = "<group>"; };
-		989F6C6C1B2E95940009FACF /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		989F6C6D1B2E95940009FACF /* TokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenRequest.swift; sourceTree = "<group>"; };
+		989F6C6C1B2E95940009FACF /* OmiseToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmiseToken.swift; sourceTree = "<group>"; };
+		989F6C6D1B2E95940009FACF /* OmiseTokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmiseTokenRequest.swift; sourceTree = "<group>"; };
 		989F6C781B2E96EA0009FACF /* img_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_bg.png; sourceTree = "<group>"; };
 		989F6C7E1B2EA0CC0009FACF /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		989F6C801B2EA0DE0009FACF /* AccessOmiseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessOmiseViewController.swift; sourceTree = "<group>"; };
@@ -135,13 +135,13 @@
 		989F6C661B2E95940009FACF /* SDK */ = {
 			isa = PBXGroup;
 			children = (
+				989F6C6A1B2E95940009FACF /* Omise.swift */,
 				989F6C671B2E95940009FACF /* Card.swift */,
 				989F6C681B2E95940009FACF /* Cards.swift */,
-				989F6C691B2E95940009FACF /* JsonParser.swift */,
-				989F6C6A1B2E95940009FACF /* Omise.swift */,
+				989F6C691B2E95940009FACF /* OmiseJsonParser.swift */,
 				989F6C6B1B2E95940009FACF /* OmiseError.swift */,
-				989F6C6C1B2E95940009FACF /* Token.swift */,
-				989F6C6D1B2E95940009FACF /* TokenRequest.swift */,
+				989F6C6C1B2E95940009FACF /* OmiseToken.swift */,
+				989F6C6D1B2E95940009FACF /* OmiseTokenRequest.swift */,
 			);
 			path = SDK;
 			sourceTree = "<group>";
@@ -278,14 +278,14 @@
 			files = (
 				989F6C721B2E95940009FACF /* OmiseError.swift in Sources */,
 				141217911B2C166000430CD4 /* ViewController.swift in Sources */,
-				989F6C701B2E95940009FACF /* JsonParser.swift in Sources */,
+				989F6C701B2E95940009FACF /* OmiseJsonParser.swift in Sources */,
 				989F6C6E1B2E95940009FACF /* Card.swift in Sources */,
 				1412178F1B2C166000430CD4 /* AppDelegate.swift in Sources */,
-				989F6C741B2E95940009FACF /* TokenRequest.swift in Sources */,
+				989F6C741B2E95940009FACF /* OmiseTokenRequest.swift in Sources */,
 				989F6C6F1B2E95940009FACF /* Cards.swift in Sources */,
 				989F6C711B2E95940009FACF /* Omise.swift in Sources */,
 				989F6C7F1B2EA0CC0009FACF /* CheckoutViewController.swift in Sources */,
-				989F6C731B2E95940009FACF /* Token.swift in Sources */,
+				989F6C731B2E95940009FACF /* OmiseToken.swift in Sources */,
 				989F6C811B2EA0DE0009FACF /* AccessOmiseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,21 +8,21 @@
 
 import Foundation
 
-protocol OmiseRequestDelegate {
-    func omiseOnSucceededToken(token: Token?)
+public protocol OmiseRequestDelegate {
+    func omiseOnSucceededToken(token: OmiseToken?)
     func omiseOnFailed(error: NSError?)
 }
 
-enum OmiseApi: Int {
+public enum OmiseApi: Int {
     case OmiseToken = 1
 }
 
 
-class Omise: NSObject, NSURLConnectionDelegate {
+public class Omise: NSObject, NSURLConnectionDelegate {
     
     var delegate: OmiseRequestDelegate?
     var data: NSMutableData?
-    var mTokenRequest: TokenRequest?
+    var mTokenRequest: OmiseTokenRequest?
     var isConnecting: Bool = false
     var requestingApi: Int?
     
@@ -30,7 +30,7 @@ class Omise: NSObject, NSURLConnectionDelegate {
         isConnecting = false
     }
     
-    func requestToken(tokenRequest: TokenRequest?) {
+    func requestToken(tokenRequest: OmiseTokenRequest?) {
         
         if isConnecting {
             let omiseError = NSError(domain: OmiseErrorDomain, code:OmiseErrorCode.OmiseServerConnectionError.rawValue , userInfo: ["Connection error": "Running other request."])
@@ -89,8 +89,8 @@ class Omise: NSObject, NSURLConnectionDelegate {
         data?.appendData(conData)
     }
     
-    func connection(connection: NSURLConnection, didFailWithError error: NSError) {
-        var omiseError:NSError?
+    public func connection(connection: NSURLConnection, didFailWithError error: NSError) {
+        var omiseError:NSError!
         if error.code == NSURLErrorTimedOut {
             omiseError = NSError(domain: OmiseErrorDomain, code: OmiseErrorCode.OmiseTimeoutError.rawValue, userInfo: ["Request timeout": "Request timeout"])
         }else{
@@ -101,7 +101,7 @@ class Omise: NSObject, NSURLConnectionDelegate {
         delegate?.omiseOnFailed(omiseError)
     }
     
-    func connection(connection: NSURLConnection, didReceiveAuthenticationChallenge challenge: NSURLAuthenticationChallenge) {
+    public func connection(connection: NSURLConnection, didReceiveAuthenticationChallenge challenge: NSURLAuthenticationChallenge) {
         
         if challenge.previousFailureCount > 0 {
             challenge.sender!.cancelAuthenticationChallenge(challenge)
@@ -121,7 +121,7 @@ class Omise: NSObject, NSURLConnectionDelegate {
         }
     }
     
-    func connection(connection: NSURLConnection, canAuthenticateAgainstProtectionSpace protectionSpace: NSURLProtectionSpace) -> Bool {
+    public func connection(connection: NSURLConnection, canAuthenticateAgainstProtectionSpace protectionSpace: NSURLProtectionSpace) -> Bool {
         return true
     }
     
@@ -129,8 +129,8 @@ class Omise: NSObject, NSURLConnectionDelegate {
         if let data = data {
             let responseText = NSString(data: data, encoding:NSUTF8StringEncoding)
             
-            let jsonParser = JsonParser()
-            var token: Token?
+            let jsonParser = OmiseJsonParser()
+            var token: OmiseToken?
             
             if let requestingApi = requestingApi {
                 switch (requestingApi) {

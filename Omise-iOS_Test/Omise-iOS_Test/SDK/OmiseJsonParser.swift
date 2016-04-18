@@ -8,8 +8,8 @@
 
 import UIKit
 
-class JsonParser: NSObject {
-    func parseOmiseToken(json: NSString)->Token? {
+public class OmiseJsonParser: NSObject {
+    func parseOmiseToken(json: NSString)->OmiseToken? {
         
         var jsonObject: AnyObject?
         do {
@@ -24,7 +24,7 @@ class JsonParser: NSObject {
                 return nil
             }
             
-            let token = Token()
+            let token = OmiseToken()
             token.tokenId = jsonDict.objectForKey("id") as? String
             token.livemode = jsonDict.objectForKey("livemode") as? Bool
             token.location = jsonDict.objectForKey("location") as? String
@@ -32,7 +32,7 @@ class JsonParser: NSObject {
             token.created = jsonDict.objectForKey("created") as? String
             
             if let cardObject = jsonDict.objectForKey("card") as? NSDictionary {
-
+                
                 token.card?.cardId = cardObject.objectForKey("id") as? String
                 token.card?.livemode = cardObject.objectForKey("livemode") as? Bool
                 token.card?.country = cardObject.objectForKey("country") as? String
@@ -48,7 +48,6 @@ class JsonParser: NSObject {
                 token.card?.created = cardObject.objectForKey("created") as? String
                 token.card?.securityCodeCheck = cardObject.objectForKey("security_code_check") as? Bool
                 token.card?.bank = cardObject.objectForKey("bank") as? String
-                
                 
                 return token
             }
