@@ -10,13 +10,13 @@ import UIKit
 
 let OmiseErrorDomain = "co.omise"
 
-enum OmiseErrorCode: Int {
+public enum OmiseErrorCode: Int {
     case OmiseTimeoutError = 92661
     case OmiseServerConnectionError
     case OmiseBadRequestError
     case OmiseUnknownError
 }
 
-class OmiseError: NSObject {
+public class OmiseError: NSObject {
    
 }

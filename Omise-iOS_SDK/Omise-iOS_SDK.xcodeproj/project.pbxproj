@@ -16,10 +16,10 @@
 		14F0EE681B2C7CDE00EF336F /* Omise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0EE671B2C7CDE00EF336F /* Omise.swift */; };
 		14F0EE6B1B2C7E3300EF336F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0EE6A1B2C7E3300EF336F /* Card.swift */; };
 		14F0EE6D1B2C7E4300EF336F /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0EE6C1B2C7E4300EF336F /* Cards.swift */; };
-		14F0EE6F1B2C7E9500EF336F /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0EE6E1B2C7E9500EF336F /* JsonParser.swift */; };
+		14F0EE6F1B2C7E9500EF336F /* OmiseJsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0EE6E1B2C7E9500EF336F /* OmiseJsonParser.swift */; };
 		14F0EE711B2C7EAF00EF336F /* OmiseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0EE701B2C7EAF00EF336F /* OmiseError.swift */; };
-		14F0EE731B2C7ED900EF336F /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0EE721B2C7ED900EF336F /* Token.swift */; };
-		14F0EE751B2C7F0D00EF336F /* TokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0EE741B2C7F0D00EF336F /* TokenRequest.swift */; };
+		14F0EE731B2C7ED900EF336F /* OmiseToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0EE721B2C7ED900EF336F /* OmiseToken.swift */; };
+		14F0EE751B2C7F0D00EF336F /* OmiseTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0EE741B2C7F0D00EF336F /* OmiseTokenRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,10 +46,10 @@
 		14F0EE671B2C7CDE00EF336F /* Omise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Omise.swift; path = SDK/Omise.swift; sourceTree = "<group>"; };
 		14F0EE6A1B2C7E3300EF336F /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Card.swift; path = SDK/Card.swift; sourceTree = "<group>"; };
 		14F0EE6C1B2C7E4300EF336F /* Cards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cards.swift; path = SDK/Cards.swift; sourceTree = "<group>"; };
-		14F0EE6E1B2C7E9500EF336F /* JsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JsonParser.swift; path = SDK/JsonParser.swift; sourceTree = "<group>"; };
+		14F0EE6E1B2C7E9500EF336F /* OmiseJsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OmiseJsonParser.swift; path = SDK/OmiseJsonParser.swift; sourceTree = "<group>"; };
 		14F0EE701B2C7EAF00EF336F /* OmiseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OmiseError.swift; path = SDK/OmiseError.swift; sourceTree = "<group>"; };
-		14F0EE721B2C7ED900EF336F /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Token.swift; path = SDK/Token.swift; sourceTree = "<group>"; };
-		14F0EE741B2C7F0D00EF336F /* TokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TokenRequest.swift; path = SDK/TokenRequest.swift; sourceTree = "<group>"; };
+		14F0EE721B2C7ED900EF336F /* OmiseToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OmiseToken.swift; path = SDK/OmiseToken.swift; sourceTree = "<group>"; };
+		14F0EE741B2C7F0D00EF336F /* OmiseTokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OmiseTokenRequest.swift; path = SDK/OmiseTokenRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,10 +149,10 @@
 				14F0EE671B2C7CDE00EF336F /* Omise.swift */,
 				14F0EE6A1B2C7E3300EF336F /* Card.swift */,
 				14F0EE6C1B2C7E4300EF336F /* Cards.swift */,
-				14F0EE6E1B2C7E9500EF336F /* JsonParser.swift */,
+				14F0EE6E1B2C7E9500EF336F /* OmiseJsonParser.swift */,
 				14F0EE701B2C7EAF00EF336F /* OmiseError.swift */,
-				14F0EE721B2C7ED900EF336F /* Token.swift */,
-				14F0EE741B2C7F0D00EF336F /* TokenRequest.swift */,
+				14F0EE721B2C7ED900EF336F /* OmiseToken.swift */,
+				14F0EE741B2C7F0D00EF336F /* OmiseTokenRequest.swift */,
 			);
 			name = SDK;
 			sourceTree = "<group>";
@@ -261,12 +261,12 @@
 				14F0EE711B2C7EAF00EF336F /* OmiseError.swift in Sources */,
 				14F0EE6D1B2C7E4300EF336F /* Cards.swift in Sources */,
 				141217BF1B2C16A300430CD4 /* ViewController.swift in Sources */,
-				14F0EE6F1B2C7E9500EF336F /* JsonParser.swift in Sources */,
+				14F0EE6F1B2C7E9500EF336F /* OmiseJsonParser.swift in Sources */,
 				141217BD1B2C16A300430CD4 /* AppDelegate.swift in Sources */,
-				14F0EE751B2C7F0D00EF336F /* TokenRequest.swift in Sources */,
+				14F0EE751B2C7F0D00EF336F /* OmiseTokenRequest.swift in Sources */,
 				14F0EE681B2C7CDE00EF336F /* Omise.swift in Sources */,
 				14F0EE6B1B2C7E3300EF336F /* Card.swift in Sources */,
-				14F0EE731B2C7ED900EF336F /* Token.swift in Sources */,
+				14F0EE731B2C7ED900EF336F /* OmiseToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
