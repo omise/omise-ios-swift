@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         let omise = Omise()
         omise.delegate = self
         
-        let tokenRequest = TokenRequest()
+        let tokenRequest = OmiseTokenRequest()
         
         if textFieldPublicKey.text!.isEmpty {
             tokenRequest.publicKey = "pkey_test_4ya6kkbjfporhk3gwnt"
@@ -74,7 +74,7 @@ extension ViewController: OmiseRequestDelegate {
         }
     }
     
-    func omiseOnSucceededToken(token: Token?) {
+    func omiseOnSucceededToken(token: OmiseToken?) {
         print("Success")
         
         if let token = token {

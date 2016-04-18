@@ -7,7 +7,7 @@
 //
 import Foundation
 
-class Cards : NSObject {
+public class Cards : NSObject {
     var from: String?
     var to: String?
     var offset: Int?

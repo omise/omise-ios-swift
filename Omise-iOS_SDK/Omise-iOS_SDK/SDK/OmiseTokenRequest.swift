@@ -1,5 +1,5 @@
 //
-//  Token.swift
+//  TokenRequest.swift
 //  Omise-iOS_SDK
 //
 //  Created by Anak Mirasing on 6/13/2558 BE.
@@ -8,13 +8,9 @@
 
 import Foundation
 
-class Token: NSObject {
-    var tokenId: String?
-    var livemode: Bool?
-    var location: String?
-    var used: Bool?
+public class OmiseTokenRequest: NSObject {
     var card: Card?
-    var created: String?
+    var publicKey: String?
     
     override init() {
         card = Card()

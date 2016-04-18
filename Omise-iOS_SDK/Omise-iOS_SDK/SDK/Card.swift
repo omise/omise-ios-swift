@@ -6,7 +6,7 @@
 //  Copyright (c) 2558 omise. All rights reserved.
 //
 
-class Card {
+public class Card {
     var cardId: String?
     var livemode: Bool?
     var location: String?
