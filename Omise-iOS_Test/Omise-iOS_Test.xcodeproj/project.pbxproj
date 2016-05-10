@@ -13,13 +13,13 @@
 		141217961B2C166000430CD4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 141217951B2C166000430CD4 /* Images.xcassets */; };
 		141217991B2C166000430CD4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 141217971B2C166000430CD4 /* LaunchScreen.xib */; };
 		141217A51B2C166000430CD4 /* Omise_iOS_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141217A41B2C166000430CD4 /* Omise_iOS_TestTests.swift */; };
-		989F6C6E1B2E95940009FACF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989F6C671B2E95940009FACF /* Card.swift */; };
-		989F6C6F1B2E95940009FACF /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989F6C681B2E95940009FACF /* Cards.swift */; };
-		989F6C701B2E95940009FACF /* OmiseJsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989F6C691B2E95940009FACF /* OmiseJsonParser.swift */; };
-		989F6C711B2E95940009FACF /* Omise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989F6C6A1B2E95940009FACF /* Omise.swift */; };
-		989F6C721B2E95940009FACF /* OmiseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989F6C6B1B2E95940009FACF /* OmiseError.swift */; };
-		989F6C731B2E95940009FACF /* OmiseToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989F6C6C1B2E95940009FACF /* OmiseToken.swift */; };
-		989F6C741B2E95940009FACF /* OmiseTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989F6C6D1B2E95940009FACF /* OmiseTokenRequest.swift */; };
+		981EF7611CE192AA004A1A38 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981EF75A1CE192AA004A1A38 /* Card.swift */; };
+		981EF7621CE192AA004A1A38 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981EF75B1CE192AA004A1A38 /* Cards.swift */; };
+		981EF7631CE192AA004A1A38 /* Omise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981EF75C1CE192AA004A1A38 /* Omise.swift */; };
+		981EF7641CE192AA004A1A38 /* OmiseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981EF75D1CE192AA004A1A38 /* OmiseError.swift */; };
+		981EF7651CE192AA004A1A38 /* OmiseJsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981EF75E1CE192AA004A1A38 /* OmiseJsonParser.swift */; };
+		981EF7661CE192AA004A1A38 /* OmiseToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981EF75F1CE192AA004A1A38 /* OmiseToken.swift */; };
+		981EF7671CE192AA004A1A38 /* OmiseTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981EF7601CE192AA004A1A38 /* OmiseTokenRequest.swift */; };
 		989F6C791B2E96EA0009FACF /* img_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 989F6C781B2E96EA0009FACF /* img_bg.png */; };
 		989F6C7F1B2EA0CC0009FACF /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989F6C7E1B2EA0CC0009FACF /* CheckoutViewController.swift */; };
 		989F6C811B2EA0DE0009FACF /* AccessOmiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989F6C801B2EA0DE0009FACF /* AccessOmiseViewController.swift */; };
@@ -46,13 +46,13 @@
 		1412179E1B2C166000430CD4 /* Omise-iOS_TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Omise-iOS_TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		141217A31B2C166000430CD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		141217A41B2C166000430CD4 /* Omise_iOS_TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Omise_iOS_TestTests.swift; sourceTree = "<group>"; };
-		989F6C671B2E95940009FACF /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		989F6C681B2E95940009FACF /* Cards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
-		989F6C691B2E95940009FACF /* OmiseJsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmiseJsonParser.swift; sourceTree = "<group>"; };
-		989F6C6A1B2E95940009FACF /* Omise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omise.swift; sourceTree = "<group>"; };
-		989F6C6B1B2E95940009FACF /* OmiseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmiseError.swift; sourceTree = "<group>"; };
-		989F6C6C1B2E95940009FACF /* OmiseToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmiseToken.swift; sourceTree = "<group>"; };
-		989F6C6D1B2E95940009FACF /* OmiseTokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmiseTokenRequest.swift; sourceTree = "<group>"; };
+		981EF75A1CE192AA004A1A38 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		981EF75B1CE192AA004A1A38 /* Cards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
+		981EF75C1CE192AA004A1A38 /* Omise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Omise.swift; sourceTree = "<group>"; };
+		981EF75D1CE192AA004A1A38 /* OmiseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmiseError.swift; sourceTree = "<group>"; };
+		981EF75E1CE192AA004A1A38 /* OmiseJsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmiseJsonParser.swift; sourceTree = "<group>"; };
+		981EF75F1CE192AA004A1A38 /* OmiseToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmiseToken.swift; sourceTree = "<group>"; };
+		981EF7601CE192AA004A1A38 /* OmiseTokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmiseTokenRequest.swift; sourceTree = "<group>"; };
 		989F6C781B2E96EA0009FACF /* img_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_bg.png; sourceTree = "<group>"; };
 		989F6C7E1B2EA0CC0009FACF /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		989F6C801B2EA0DE0009FACF /* AccessOmiseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessOmiseViewController.swift; sourceTree = "<group>"; };
@@ -98,8 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				1412178E1B2C166000430CD4 /* AppDelegate.swift */,
+				981EF7591CE192AA004A1A38 /* SDK */,
 				989F6C771B2E96EA0009FACF /* Images */,
-				989F6C661B2E95940009FACF /* SDK */,
 				989F6C761B2E95A60009FACF /* Controller */,
 				989F6C751B2E959C0009FACF /* Views */,
 				1412178C1B2C166000430CD4 /* Supporting Files */,
@@ -132,18 +132,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		989F6C661B2E95940009FACF /* SDK */ = {
+		981EF7591CE192AA004A1A38 /* SDK */ = {
 			isa = PBXGroup;
 			children = (
-				989F6C6A1B2E95940009FACF /* Omise.swift */,
-				989F6C671B2E95940009FACF /* Card.swift */,
-				989F6C681B2E95940009FACF /* Cards.swift */,
-				989F6C691B2E95940009FACF /* OmiseJsonParser.swift */,
-				989F6C6B1B2E95940009FACF /* OmiseError.swift */,
-				989F6C6C1B2E95940009FACF /* OmiseToken.swift */,
-				989F6C6D1B2E95940009FACF /* OmiseTokenRequest.swift */,
+				981EF75A1CE192AA004A1A38 /* Card.swift */,
+				981EF75B1CE192AA004A1A38 /* Cards.swift */,
+				981EF75C1CE192AA004A1A38 /* Omise.swift */,
+				981EF75D1CE192AA004A1A38 /* OmiseError.swift */,
+				981EF75E1CE192AA004A1A38 /* OmiseJsonParser.swift */,
+				981EF75F1CE192AA004A1A38 /* OmiseToken.swift */,
+				981EF7601CE192AA004A1A38 /* OmiseTokenRequest.swift */,
 			);
-			path = SDK;
+			name = SDK;
+			path = "../../Omise-iOS_SDK/Omise-iOS_SDK/SDK";
 			sourceTree = "<group>";
 		};
 		989F6C751B2E959C0009FACF /* Views */ = {
@@ -276,16 +277,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				989F6C721B2E95940009FACF /* OmiseError.swift in Sources */,
+				981EF7671CE192AA004A1A38 /* OmiseTokenRequest.swift in Sources */,
 				141217911B2C166000430CD4 /* ViewController.swift in Sources */,
-				989F6C701B2E95940009FACF /* OmiseJsonParser.swift in Sources */,
-				989F6C6E1B2E95940009FACF /* Card.swift in Sources */,
+				981EF7661CE192AA004A1A38 /* OmiseToken.swift in Sources */,
 				1412178F1B2C166000430CD4 /* AppDelegate.swift in Sources */,
-				989F6C741B2E95940009FACF /* OmiseTokenRequest.swift in Sources */,
-				989F6C6F1B2E95940009FACF /* Cards.swift in Sources */,
-				989F6C711B2E95940009FACF /* Omise.swift in Sources */,
+				981EF7641CE192AA004A1A38 /* OmiseError.swift in Sources */,
+				981EF7611CE192AA004A1A38 /* Card.swift in Sources */,
+				981EF7621CE192AA004A1A38 /* Cards.swift in Sources */,
 				989F6C7F1B2EA0CC0009FACF /* CheckoutViewController.swift in Sources */,
-				989F6C731B2E95940009FACF /* OmiseToken.swift in Sources */,
+				981EF7651CE192AA004A1A38 /* OmiseJsonParser.swift in Sources */,
+				981EF7631CE192AA004A1A38 /* Omise.swift in Sources */,
 				989F6C811B2EA0DE0009FACF /* AccessOmiseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
