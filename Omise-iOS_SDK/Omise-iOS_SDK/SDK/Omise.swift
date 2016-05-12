@@ -26,7 +26,7 @@ public class Omise: NSObject, NSURLConnectionDelegate {
     var isConnecting: Bool = false
     var requestingApi: Int?
     
-    override init() {
+    public override init() {
         isConnecting = false
     }
     
