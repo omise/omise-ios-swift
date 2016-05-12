@@ -9,10 +9,10 @@
 import Foundation
 
 public class OmiseTokenRequest: NSObject {
-    var card: Card?
-    var publicKey: String?
+    public var card: Card?
+    public var publicKey: String?
     
-    override init() {
+    public override init() {
         card = Card()
     }
 }

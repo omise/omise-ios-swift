@@ -20,7 +20,7 @@ public enum OmiseApi: Int {
 
 public class Omise: NSObject, NSURLConnectionDelegate {
     
-    var delegate: OmiseRequestDelegate?
+    public var delegate: OmiseRequestDelegate?
     var data: NSMutableData?
     var mTokenRequest: OmiseTokenRequest?
     var isConnecting: Bool = false
@@ -30,7 +30,7 @@ public class Omise: NSObject, NSURLConnectionDelegate {
         isConnecting = false
     }
     
-    func requestToken(tokenRequest: OmiseTokenRequest?) {
+    public func requestToken(tokenRequest: OmiseTokenRequest?) {
 
         if isConnecting {
             let omiseError = NSError(domain: OmiseErrorDomain, code:OmiseErrorCode.OmiseServerConnectionError.rawValue , userInfo: ["Connection error": "Running other request."])
@@ -44,7 +44,7 @@ public class Omise: NSObject, NSURLConnectionDelegate {
         mTokenRequest = tokenRequest
         
         let url = NSURL(string: "https://vault.omise.co/tokens")
-        let OMISE_IOS_VERSION = "2.0.0"
+        let OMISE_IOS_VERSION = "2.0.1"
         let req = NSMutableURLRequest(URL: url!, cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 15)
         req.HTTPMethod = "POST"
         

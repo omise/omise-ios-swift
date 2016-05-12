@@ -7,22 +7,22 @@
 //
 
 public class Card {
-    var cardId: String?
-    var livemode: Bool?
-    var location: String?
-    var country: String?
-    var number: String?
-    var city: String?
-    var postalCode: String?
-    var financing: String?
-    var lastDigits: String?
-    var brand: String?
-    var expirationMonth: String?
-    var expirationYear: String?
-    var fingerprint: String?
-    var name: String?
-    var created: String?
-    var securityCode: String?
-    var securityCodeCheck: Bool?
-    var bank: String?
+    public var cardId: String?
+    public var livemode: Bool?
+    public var location: String?
+    public var country: String?
+    public var number: String?
+    public var city: String?
+    public var postalCode: String?
+    public var financing: String?
+    public var lastDigits: String?
+    public var brand: String?
+    public var expirationMonth: String?
+    public var expirationYear: String?
+    public var fingerprint: String?
+    public var name: String?
+    public var created: String?
+    public var securityCode: String?
+    public var securityCodeCheck: Bool?
+    public var bank: String?
 }
